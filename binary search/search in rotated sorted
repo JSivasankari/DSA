@@ -1,0 +1,9 @@
+class Solution(object):
+    def search(self, nums, target):
+        n=len(nums)
+        for i in range(n):
+            if target in nums:
+                return True
+            return False
+        
+        
