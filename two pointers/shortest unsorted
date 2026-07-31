@@ -1,0 +1,16 @@
+class Solution(object):
+    def findUnsortedSubarray(self, nums):
+        num=sorted(nums)
+        left=0
+        while left<len(nums) and nums[left]==num[left]:
+            left+=1
+        right=len(nums)-1
+        while right>=0 and nums[right]==num[right]:
+            right-=1
+        if left>right:
+            return 0
+        return right-left+1
+        
+
+        
+        
