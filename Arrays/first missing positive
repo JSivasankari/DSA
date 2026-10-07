@@ -1,0 +1,14 @@
+class Solution(object):
+    def firstMissingPositive(self, nums):
+        nums.sort()
+        missing=1
+        for i in range(len(nums)):
+            if nums[i]==missing:
+                missing+=1
+            elif nums[i]>missing:
+                return missing
+        return missing
+
+
+        
+        
